@@ -1,0 +1,10 @@
+.is-hidden{
+    display: none;
+}
+
+.active-btn{
+    background-color: $activeButtonColor;
+    box-shadow: 0px 8px 43px $hoverActiveButtonColor;
+    border: none;
+    color: $lightTextColor;
+}

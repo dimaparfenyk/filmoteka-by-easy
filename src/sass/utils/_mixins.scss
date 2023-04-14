@@ -1,0 +1,16 @@
+.btn{
+    min-width: 130px;
+    border-radius: 5px;
+    padding: 12px 0;
+
+    font-weight: $mainFontWeight;
+    font-size: $mainFontSize;
+    line-height: $mainLineHeight;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    color: $lightTextColor;
+    
+    @media screen and (min-width: 768px) {
+        min-width: 150px;
+      }
+}

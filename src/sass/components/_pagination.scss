@@ -1,0 +1,42 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    @media screen and (min-width: 768px) {
+        margin-top: 60px;
+      }
+}
+.pagination-list{
+    display: flex;
+    align-items: center;
+}
+
+.inner-pagination-list{
+    display: flex;
+    align-items: center;
+}
+
+.inner-pagination-list >span{
+    margin-right: 10px;
+}
+
+.paginate-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.pagination-item:not(:last-child){
+    margin-right: 10px;
+}
+.paginate-block{
+    padding: 12px;
+}
+.paginate-block:not(:last-child){
+    margin-right: 10px;
+}
