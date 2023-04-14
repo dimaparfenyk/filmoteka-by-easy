@@ -44,6 +44,7 @@ export  function renderPaginationMarkup(currentPage, totalPages, numAdjacentPage
     }
     }
     
+    // fetchAndRenderMainPageContent(1);
     appendPaginationMarkup(paginationMarkup);
 
     let paginateBtns=[...document.querySelectorAll('.paginate-btn')]

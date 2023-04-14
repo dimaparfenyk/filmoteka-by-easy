@@ -12,4 +12,9 @@ export const refs={
     innerPaginationButtonsList:document.querySelector('.inner-pagination-list'),
     prevBtn:document.querySelector('[data-action="prev"]'),
     nextBtn:document.querySelector('[data-action="next"]'),
+
+    modal:document.querySelector('.modal'),
+    backdrop:document.querySelector('.backdrop'),
+    wrapBox:document.querySelector('.movieCard-box'),
+    closeBtn:document.querySelector('.button-close'),
 };

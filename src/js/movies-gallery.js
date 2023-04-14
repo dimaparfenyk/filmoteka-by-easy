@@ -13,11 +13,11 @@ export async function fetchAndRenderMainPageContent(page){
 
 fetchAndRenderMainPageContent(1);
 
-
 function createMoviesGalleryMarkup(items){
   return  items.map(item=>`
     <li class="movie__item">
     <img 
+    id="${item.id}"
     class="movie__image" 
     src="https://image.tmdb.org/t/p/w500${item.poster_path}" 
     alt="${item.title}"/>

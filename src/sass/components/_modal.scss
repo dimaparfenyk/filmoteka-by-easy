@@ -1,0 +1,207 @@
+.backdrop {
+    position: fixed;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    overflow: auto;
+  
+    width: 100vw;
+    height: 100vh;
+  
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 500ms, visibility 250ms;
+  
+    &.is-hidden .modal-container {
+      transform: scale(0.5) rotate(180deg) translate(-50%, -50%);
+      transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+  
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: scale(1) rotate(0) translate(-50%, -50%);
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+  
+    @media screen and (min-width: 768px) {
+        width: 704px;
+        height: 552px;
+
+        padding: 40px 72px 40px 36px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 815px;
+        height: 556px;
+        padding: 40px 16px; 
+    }
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+  .movieCard-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px 54px 20px;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 0;
+  }
+  }
+
+  .modal-poster-box{
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+     margin-right: 48px;
+    }
+    @media screen and (min-width: 1200px) {
+     margin-right: 16px;
+    }
+  }
+
+  .modal-info-box{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal-info-wrapper{
+    margin-bottom: 20px;
+  }
+
+  .btn-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+ 
+  .button-close {
+    position: absolute;
+    top: 0px;
+    right: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+
+    @media screen and (min-width: 768px) {
+      top: 8px;
+      right: 8px;
+   }
+
+    .icon-close{
+      stroke: #000000;
+      width: 30px;
+      height: 30px;
+      
+      transition:stroke 350ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+      &:hover,
+      &:focus {
+        stroke: $hoverActiveButtonColor;
+      }
+    }
+  }
+
+  .modal-img{
+    overflow: hidden;
+    border-radius: 5px;
+
+    @media screen and (min-width: 768px) {
+      max-width: 264px;
+      max-height: 374px;
+    }
+   
+     @media screen and (min-width: 1200px) {
+      max-width: 380px;
+      max-height: 478px;
+    }
+  }
+
+  .movie-title{
+  margin-bottom: 20px;
+
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  text-transform: uppercase;
+  }
+
+  .movie-about-info{
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: #8C8C8C;
+  & span{
+    color:$darkTextColor;
+  }
+  & .vote-average{
+    padding: 1px 9px;
+    background-color: $accentTextColor;
+    color: $lightTextColor;
+    border-radius: 5px;
+  }
+  }
+
+  .movie-about-info+.movie-about-info{
+      margin-top: 8px;
+  }
+
+  .subtitle{
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+
+      @media screen and (min-width: 768px) {
+       margin-bottom: 20px;
+    }
+     @media screen and (min-width: 1200px) {
+       margin-bottom: 8px;
+    }
+  }
+
+  .movie-overview{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .modal-btn{
+    min-width: 140px;
+    min-height: 44px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 8px;
+    
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+  
+    text-transform: uppercase;
+    transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus{
+      scale:1.01;
+    }
+  }
+
+.modal-btn+.modal-btn{
+    margin-left: 16px;
+}
