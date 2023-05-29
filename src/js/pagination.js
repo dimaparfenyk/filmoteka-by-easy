@@ -1,5 +1,6 @@
 import { refs } from "./services/references";
 import { fetchAndRenderMainPageContent } from "./movies-gallery";
+import api from './services/fetch-movies';
 
 export  function renderPaginationMarkup(currentPage, totalPages, numAdjacentPages) {
     let paginationMarkup = "";
@@ -44,7 +45,6 @@ export  function renderPaginationMarkup(currentPage, totalPages, numAdjacentPage
     }
     }
     
-    // fetchAndRenderMainPageContent(1);
     appendPaginationMarkup(paginationMarkup);
 
     let paginateBtns=[...document.querySelectorAll('.paginate-btn')]
@@ -56,6 +56,7 @@ export  function renderPaginationMarkup(currentPage, totalPages, numAdjacentPage
             btn.classList.remove('active-btn')
         }
     })
+    return paginationMarkup;
     }
     
     // // Обработка кликов на кнопки пагинации

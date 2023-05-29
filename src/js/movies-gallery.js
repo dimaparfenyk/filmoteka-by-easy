@@ -2,16 +2,17 @@ import { refs } from "./services/references";
 import api from "./services/fetch-movies";
 import { renderPaginationMarkup } from "./pagination";
 
-export async function fetchAndRenderMainPageContent(page){
- await api.fetchMovies(page)
+export async function fetchAndRenderMainPageContent(page, fetch){
+ await fetch(page)
   .then(({results, total_pages})=>{ 
+  refs.moviesGallery.innerHTML=createMoviesGalleryMarkup(results)
   appendMarkup(refs.moviesGallery,results);
   renderPaginationMarkup(page, total_pages, 2);
   }
   );
 };
 
-fetchAndRenderMainPageContent(1);
+fetchAndRenderMainPageContent(1, api.fetchMovies);
 
 function createMoviesGalleryMarkup(items){
   return  items.map(item=>`

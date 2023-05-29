@@ -19,7 +19,10 @@
 }
 
 .inner-pagination-list >span{
-    margin-right: 10px;
+    margin-right: 4px;
+    @media screen and (min-width: 768px) {
+        margin-right: 10px;
+      }
 }
 
 .paginate-btn,
@@ -27,11 +30,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 36px;
-    height: 36px;
-    padding: 16px;
+    width: 24px;
+    height: 24px;
+    padding: 8px;
     border-radius: 50%;
     transition: all 0.5s ease;
+
+    @media screen and (min-width: 768px) {
+        padding: 16px;
+        width: 36px;
+        height: 36px;
+      }
     &:hover{
         color: #fff;
         background-color: $hoverActiveButtonColor;
@@ -39,13 +48,19 @@
 }
 
 .pagination-item:not(:last-child){
-    margin-right: 10px;
+    margin-right: 4px;
+    @media screen and (min-width: 768px) {
+        margin-right: 10px;
+      }
 }
 
 .paginate-block{
-    padding: 12px;
+    padding: 4px;
+    @media screen and (min-width: 768px) {
+        padding: 12px;
+      }
 }
 
 .paginate-block:not(:last-child){
-    margin-right: 10px;
+   margin-right: 8px;
 }
